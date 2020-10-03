@@ -11,7 +11,6 @@
 
 // Include Files
 #include <string.h>
-#include <stdlib.h>
 // Project Includes 
 #include <sg_driver.h>
 
@@ -41,6 +40,7 @@ void sg_pckt_buff(char *packet, void *pckt_wd, size_t sz)
     for (uint16_t step = 0; step < sz; ++step)
             packet[step] = ((char*)pckt_wd)[step];
 }
+
 void impose_buff(char *buff_to, char *buff_from, int begin, uint32_t end, uint32_t margin)
 {
     for (; begin <= end; ++begin)
@@ -67,7 +67,6 @@ SG_Packet_Status serialize_sg_packet( SG_Node_ID loc, SG_Node_ID rem, SG_Block_I
         SG_System_OP op, SG_SeqNum sseq, SG_SeqNum rseq, char *data, 
 	char *packet, size_t *plen )
 {
-//	printf("serialize:\n");
 	SG_Packet_Status pack_status;
 	pack_status = SG_PACKT_OK;
 
