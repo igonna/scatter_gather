@@ -15,19 +15,6 @@
 #include <sg_driver.h>
 
 // Defines
-
-/*typedef struct {
-	uint32_t magic_v1;
-	SG_Node_ID locNodeId;
-	SG_Node_ID remNodeId;
-	SG_Block_ID blockID;
-	SG_System_OP operation;
-	SG_SeqNum sendSeqNo;
-	SG_SeqNum recvSeqNo;
-	char indc_data;
-//	SG_Data_Block *data;
-	uint32_t magic_v2;
-}SG_Packet_WD;*/
 //
 // Global Data
 
@@ -261,21 +248,4 @@ SG_Packet_Status deserialize_sg_packet( SG_Node_ID *loc, SG_Node_ID *rem, SG_Blo
 
 	return(pack_status);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
